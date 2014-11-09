@@ -49,13 +49,13 @@
 					<ul class="nav navbar-nav">
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Cart&nbsp;<span class="badge">0</span></a></li>
+						<li><a href="javascript:void(0)"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Cart&nbsp;<span class="badge">0</span></a></li>
 					</ul>
 					<form class="navbar-form navbar-right" role="search">
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
-								<input type="search" class="form-control" placeholder="Search">
+								<input type="search" class="form-control" placeholder="Search" ng-model="search">
 							</div>
 						</div>
 					</form>
@@ -104,13 +104,14 @@
 			
 			<!-- Main content -->
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-3" ng-repeat="product in products | filter: search">
 					<div class="thumbnail">
 						<img data-src="holder.js/250x250" alt="...">
 						<div class="caption">
-							<h3>TAPPETO BAGNO TRAPUNTATO</h3>
-							<p>Trappeti</p>
-							<p style="text-align: center;"><a href="javascript:void(0)" class="btn btn-default" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> $22.00</a></p>
+							<h3>{{product.name}}</h3>
+							<p>{{product.description}}</p>
+							<p>Colors:<span ng-repeat="color in product.colors">&nbsp;{{color}}</span></p>
+							<p style="text-align: center;"><a href="javascript:void(0)" class="btn btn-default" role="button"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;${{product.price}}</a></p>
 						</div>
 					</div>
 				</div>
