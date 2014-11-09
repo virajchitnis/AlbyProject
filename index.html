@@ -3,14 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Table Cloths</title>
+	
+	<!-- Bootstrap via CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	
+	<!-- AngularJS via CDN -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
 </head>
 <body>
+	<!-- View for displaying routed content in -->
 	<ng-view></ng-view>
+	
+	<!-- Router content templates -->
 	<script type="text/ng-template" id="/home.html">
 		<h1>Table Cloths</h1>
 	</script>
+	
+	<!-- Additional scripts -->
 	<script src="js/app.js"></script>
 	<script src="js/controllers.js"></script>
 </body>
