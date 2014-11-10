@@ -62,5 +62,11 @@ mainController.controller('HomeController', ['$scope', '$http', function($scope,
 		colors: ["Blanc/Beige", "Jaune/Bleu"],
 		price: 22.00
 	},
+	{
+		name: 'Arbre olivier',
+		description: "Description",
+		colors: ["Jaune vif"],
+		price: 22.00
+	},
 	];
 }]);
